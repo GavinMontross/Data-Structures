@@ -32,7 +32,9 @@ public class Parallelogram  extends AbstrtactShape {
     public Parallelogram(double a, double b, double theta) {
 
 		/*Your Code Here*/
-
+        this.a = a;
+        this.b = b;
+        this.theta = theta;
     }
 
     /**
@@ -43,6 +45,8 @@ public class Parallelogram  extends AbstrtactShape {
     public double computeArea() {
 
 		/*Your Code Here*/
+        double area = a * b * sin(theta);
+        return area;
     }
 
     /**
@@ -53,6 +57,8 @@ public class Parallelogram  extends AbstrtactShape {
     public double computePerimeter() {
 
 		/*Your Code Here*/
+        double perimeter = (2*a) + (2*b);
+        return perimeter;
     }
 
     /** 
@@ -93,5 +99,9 @@ public class Parallelogram  extends AbstrtactShape {
     public double getHeight() {
         return a*Math.sin(theta);
     }   
+    public static void main(String[] args) {
+        Parallelogram p = new Parallelogram(5,10,45);
+        System.out.println(p.computeArea());
+    }
 }
 /*</exercise>*/
