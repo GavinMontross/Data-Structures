@@ -1,6 +1,6 @@
 // Data Structures 
 // August 27, 2024
-// Max time is O(n^2)
+// Reviewing Java
 import java.util.Arrays;
 public class Day_one {
     public static int[] twoSum(int[] nums, int target){
