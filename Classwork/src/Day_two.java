@@ -1,5 +1,5 @@
 // Data Structures
-// 8/29/2024
+// August 29, 2024
 
 public class Day_two {
     public static void main(String []args){
