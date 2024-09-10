@@ -4,7 +4,6 @@ public class MainClassDemo {
     public static void main(String[] args) {
         SinglyLinkedList SLL = new SinglyLinkedList();
         
-        // Insert Elements
         SLL.insertAtEnd(10);
         SLL.insertAtEnd(20);
         SLL.insertAtEnd(30);
