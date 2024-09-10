@@ -7,5 +7,6 @@ public class MainClassDemo {
         myList.add(20);
         myList.add(30);
         myList.displayForward();
+        myList.displayBackward();
     }
 }

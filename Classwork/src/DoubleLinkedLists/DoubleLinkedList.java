@@ -29,5 +29,14 @@ public void displayForward() {
     }
     System.out.println("null");
 }
+
+public void displayBackward() {
+    Node current = tail;
+    while(current != null) {
+        System.out.print(current.data + " -> ");
+        current = current.prev;
+    }
+    System.out.println("null");
+}
 }
 
