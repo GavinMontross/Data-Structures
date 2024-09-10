@@ -1,7 +1,7 @@
 // Data Structures
 // August 29, 2024
 
-public class Day_two {
+public class Interface {
     public static void main(String []args){
         Fan myFan = new Fan("BestFans");
         myFan.turnOn();
