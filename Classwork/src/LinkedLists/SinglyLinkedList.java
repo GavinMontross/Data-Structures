@@ -69,7 +69,6 @@ public void insertAtFront(int data) {
     else{
         newNode.next = head;
         head = newNode;
-
     }}
     
 public void insertBefore(int beforeData, int newData) {
