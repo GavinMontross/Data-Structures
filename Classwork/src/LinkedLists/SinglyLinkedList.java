@@ -1,5 +1,4 @@
 package LinkedLists;
-
 public class SinglyLinkedList {
     Node head;
 
@@ -86,7 +85,7 @@ public void insertBefore(int beforeData, int newData) {
     }
 }
 
-public void delete(int data){
+public void delete(int data){       //Checks for this case: Does it exist? is it the head? is it the last node? otherwise...
     if (head == null){
         System.out.println("List is empty.");
         return;
@@ -133,6 +132,29 @@ public void reverse(){
         current = temp;
     }
     head = prev;
+}
+public void deleteBefore(int data){
+    if(head == null){
+        System.out.println("List does not exist. ");
+        return;
+    }
+    if(head.data == data){
+        System.out.println("There is no data to delete before " + head);
+    }
+    if (head.next != null && head.next.data == data) {
+        head = head.next;
+        return;
+    }
+    Node current = head;
+    while(current.next != null && current.next.next != null && current.next.next.data != data){
+        current = current.next;
+    }
+    if(current.next != null){
+        current.next = current.next.next;
+    }
+    else{
+        System.out.println("Element not found.");
+    }
 }
 }
 
