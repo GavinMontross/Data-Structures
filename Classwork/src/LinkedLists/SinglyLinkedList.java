@@ -119,5 +119,20 @@ public void deleteAfter(int afterData){
         System.out.println("Node with data " + afterData + " has no next node to delete.");
     }
 }
+
+public void reverse(){
+    if (head == null){
+        System.out.println("List is empty. ");
+    }
+    Node current = head;
+    Node prev = null;
+    while(current != null){
+        Node temp = current.next;
+        current.next = prev;
+        prev = current;
+        current = temp;
+    }
+    head = prev;
+}
 }
 

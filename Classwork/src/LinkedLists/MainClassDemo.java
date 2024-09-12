@@ -40,5 +40,9 @@ public class MainClassDemo {
         SLL.deleteAfter(10);
         System.out.print("Deleting after Node with data 10: ");
         SLL.display();
+        System.out.println();
+        System.out.print("Reversing list: ");
+        SLL.reverse();
+        SLL.display();
     }
 }
