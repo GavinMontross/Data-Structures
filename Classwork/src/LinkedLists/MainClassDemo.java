@@ -24,6 +24,11 @@ public class MainClassDemo {
         SLL.display();
         System.out.println();
 
+        SLL.insertAtFront(3);
+        System.out.print("Inserting 3 at the front: ");
+        SLL.display();
+        System.out.println();
+
         SLL.insertBefore(20, 15);
         System.out.print("Inserting 15 before 20: " );
         SLL.display();
