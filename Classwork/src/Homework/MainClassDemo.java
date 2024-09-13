@@ -44,10 +44,15 @@ class SNode {
     }
     }
     // Insert a new node at the front of the list
-    public void insertAtFront(int newData) {
-    //WRITE YOUR CODE HERE
-    return;
-    }
+    public void insertAtFront(int data) {
+        SNode newNode = new SNode(data);
+        if (head == null){
+            newNode = head;
+        }
+        else{
+            newNode.next = head;
+            head = newNode;
+        }}
     // Insert a new node before a specific node
 
     // Homework Task 1:
@@ -136,9 +141,13 @@ class SNode {
     }
     // count the number of nodes in the list
     public int totalNodes() {
-    int total = 0;
-    //WRITE YOUR CODE HERE
-    return total;
+        int total = 0;
+        SNode current = head;
+        while(current != null){
+            total ++;
+            current = current.next;
+        }
+        return total;
     }
     }
     public class MainClassDemo {
@@ -151,14 +160,16 @@ class SNode {
     System.out.print("Initial List: ");
     SLL.display(); // Output: 10 -> 20 -> 30 -> null
     // Insert before
-    System.out.print("Inserting 15 before 20: ");
+    System.out.print("insertBefore(20,15): ");
     SLL.insertBefore(20, 15);
     SLL.display();
     // Delete after a specific node
-    System.out.print("Deleting node after 10: ");
+    System.out.print("deleteAfter(10): ");
     SLL.deleteAfter(10);
     SLL.display(); // Output: 10 -> 30 -> null
-    //insertAtFront(90); //add 90 as head
-    // System.out.println("Total nodes in the list: "+totalNodes);
+    System.out.print("insertAtFront(90): ");
+    SLL.insertAtFront(90); //add 90 as head
+    SLL.display();
+    System.out.println("Total nodes in the list: "+ SLL.totalNodes());
     }
     }
