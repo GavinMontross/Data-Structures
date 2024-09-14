@@ -163,10 +163,13 @@ class SNode {
     System.out.print("insertBefore(20,15): ");
     SLL.insertBefore(20, 15);
     SLL.display();
+    SLL.insertBefore(11, 10);
+    SLL.display();
     // Delete after a specific node
     System.out.print("deleteAfter(10): ");
     SLL.deleteAfter(10);
     SLL.display(); // Output: 10 -> 30 -> null
+    SLL.deleteAfter(30);
     System.out.print("insertAtFront(90): ");
     SLL.insertAtFront(90); //add 90 as head
     SLL.display();
