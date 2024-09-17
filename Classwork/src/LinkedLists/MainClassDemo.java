@@ -45,5 +45,6 @@ public class MainClassDemo {
         SLL.display();
         SLL.deleteBefore(5);
         SLL.display();
+        SLL.displayInReverse();
     }
 }

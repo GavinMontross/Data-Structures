@@ -1,4 +1,7 @@
 package LinkedLists;
+
+import java.util.ArrayList;
+
 public class SinglyLinkedList {
     Node head;
 
@@ -155,6 +158,19 @@ public void deleteBefore(int data){
     else{
         System.out.println("Element not found.");
     }
+}
+public void displayInReverse(){
+    ArrayList<Node> myList = new ArrayList<>();
+    Node current = head;
+    while(current != null){
+        myList.add(current);
+        current = current.next;
+    }
+    for (int i = myList.size() - 1; i >=0; i --){
+        System.out.print(myList.get(i).data + " -> ");
+    }
+    System.out.println("null");
+
 }
 }
 
