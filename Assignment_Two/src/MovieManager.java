@@ -84,8 +84,8 @@ public static void removeThes(LinkedList<Movie> movieList){
 
     public static void main(String[] args) {
         LinkedList<Movie> movieList = new LinkedList<>();
-        addMoviesfromFile("Assignment_Three/movieListA.txt", movieList);
-        addMoviesfromFile("Assignment_Three/movieListB.txt", movieList);
+        addMoviesfromFile("Assignment_Two/movieListA.txt", movieList);
+        addMoviesfromFile("Assignment_Two/movieListB.txt", movieList);
 
         // Task 1: Print Movie List
         printMergedMovieList(movieList);
