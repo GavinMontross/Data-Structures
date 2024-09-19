@@ -1,6 +1,7 @@
 package stackAndQueue;
 
 import java.util.Queue;
+import java.util.Stack;
 import java.util.Arrays;
 import java.util.LinkedList;
 
@@ -8,6 +9,7 @@ public class Problem3 {
     public static void interleave(Queue<Integer> queue){ // 10, 20, 30, 40, 50, 60, 70, 80
         Queue<Integer> tempQueue = new LinkedList<>(queue);
         int mid = queue.size()/2;
+        int size = queue.size();
         for(int i = 0; i < mid; i ++){
             tempQueue.add(tempQueue.remove());  // 50, 60, 70, 80, 10, 20, 30, 40
         }
