@@ -10,13 +10,13 @@ public class DequeHW {
         int mid = queue.size()/2;
         Deque<Integer> deque = new LinkedList<>();
         for(int i = 0; i < mid; i ++){
-            queue.add(queue.remove());   //50,60,70,80,10,20,30,40
+            queue.add(queue.remove());   // Moves first half to the end: 50,60,70,80,10,20,30,40
         }
         for(int i = 0; i < mid; i ++){
-            deque.addFirst(queue.remove());   //80,70,60,50
+            deque.addFirst(queue.remove());   // Adds second half to the deque: 80,70,60,50
         }
         while(!deque.isEmpty()){
-            queue.add(deque.remove());
+            queue.add(deque.remove()); 
         }
         }
     public static void main(String[] args) {
