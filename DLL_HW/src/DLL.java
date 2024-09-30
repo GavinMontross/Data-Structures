@@ -38,6 +38,7 @@ public class DLL {
                     current.prev = newNode;
                 }
             }
+            current = current.next;
         }
         return;
     }
