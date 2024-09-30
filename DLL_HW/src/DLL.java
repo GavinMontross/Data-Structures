@@ -27,6 +27,18 @@ public class DLL {
     public void insertBefore(int beforeData, int newData)
     {
         //WRITE YOUR CODE HERE
+        DLLNode current = head;
+        while (current != null){
+            if(current.data == beforeData){
+                DLLNode newNode = new DLLNode(newData);
+                if(current.prev != null){
+                    current.prev.next = newNode;
+                    newNode.prev = current.prev;
+                    newNode.next = current;
+                    current.prev = newNode;
+                }
+            }
+        }
         return;
     }
 
@@ -34,6 +46,15 @@ public class DLL {
     public void insertAtHead(int Data)
     {
         //WRITE YOUR CODE HERE
+        DLLNode newNode = new DLLNode(Data);
+        if (head == null){
+            head = newNode;
+            tail = newNode;
+            } else {
+                newNode.next = head;
+                head.prev = newNode;
+                head = newNode;
+            }
         return;
     }
 
