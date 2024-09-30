@@ -1,8 +1,8 @@
 import java.util.*;
 public class MasterArrayLists {
 
-    public static boolean unique(List list){
-        List seen = new ArrayList();
+    public static boolean unique(List<?> list){
+        List<Object> seen = new ArrayList<>();
         for (int i = 0; i < list.size(); i ++){
             if(seen.contains(list.get(i))){
                 return false;
@@ -30,7 +30,7 @@ public class MasterArrayLists {
         }
         return newList;
     }
-    public static boolean isPermutation(List one, List two){
+    public static boolean isPermutation(List<?> one, List<?> two){
         one.sort(null);
         two.sort(null);
         return one.equals(two);

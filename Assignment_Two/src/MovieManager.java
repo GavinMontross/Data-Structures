@@ -1,5 +1,7 @@
 import java.io.*;
-import java.util.*;
+import java.util.LinkedList;
+import java.util.Scanner;
+import java.io.FileNotFoundException;
 
 // Class to represent a Movie with name and year
 class Movie {
