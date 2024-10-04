@@ -35,6 +35,7 @@ class TryCatchExample {
             int a = args.length;
             System.out.println("a = " + a);
             int b = 42/a;
+            System.out.println("b = " + b);
             int[] c = {6};
             c[42] = 99;
         }
