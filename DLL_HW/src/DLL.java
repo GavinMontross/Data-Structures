@@ -24,8 +24,8 @@ public class DLL {
     }
 
     //  Insert a new node before a specific node
-    public void insertBefore(int beforeData, int newData)
-    {
+    public void insertBefore(int beforeData, int newData){
+    
         //WRITE YOUR CODE HERE
         DLLNode current = head;
         while (current != null){
@@ -40,8 +40,11 @@ public class DLL {
             }
             current = current.next;
         }
+        
         return;
     }
+
+
 
     // Insert at the beginning of the linked list
     public void insertAtHead(int Data)
