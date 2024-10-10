@@ -17,7 +17,7 @@ public void display(){
     }
     Node current = head;
     while(current != null){
-        System.out.print(current.data + " -> ");
+        System.out.print(current.val + " -> ");
         current = current.next;
     }
     System.out.println("null");
@@ -50,7 +50,7 @@ public void insertAtEnd(int data){
 
 public void insertAfter(int afterData, int newData){
     Node current = head;
-    while(current != null && current.data != afterData){
+    while(current != null && current.val != afterData){
         current = current.next;
     }
     if(current != null){
@@ -75,7 +75,7 @@ public void insertAtFront(int data) {
     
 public void insertBefore(int beforeData, int newData) {
     Node current = head;
-    while(current != null && current.next != null && current.next.data != beforeData){
+    while(current != null && current.next != null && current.next.val != beforeData){
         current = current.next;
     }
     if (current != null && current.next != null){
@@ -93,12 +93,12 @@ public void delete(int data){       //Checks for this case: Does it exist? is it
         System.out.println("List is empty.");
         return;
     }
-    if (head.data == data){
+    if (head.val == data){
         head = head.next;
         return;
     }
     Node current = head;
-    while(current != null && current.next.data != data){
+    while(current != null && current.next.val != data){
         current = current.next;}
         if(current.next != null){
             current.next = current.next.next;
@@ -110,7 +110,7 @@ public void delete(int data){       //Checks for this case: Does it exist? is it
 
 public void deleteAfter(int afterData){
     Node current = head;
-    while(current != null && current.data != afterData){
+    while(current != null && current.val != afterData){
         current = current.next;
     }
     if (current != null && current.next != null) {
@@ -141,15 +141,15 @@ public void deleteBefore(int data){
         System.out.println("List does not exist. ");
         return;
     }
-    if(head.data == data){
+    if(head.val == data){
         System.out.println("There is no data to delete before " + head);
     }
-    if (head.next != null && head.next.data == data) {
+    if (head.next != null && head.next.val == data) {
         head = head.next;
         return;
     }
     Node current = head;
-    while(current.next != null && current.next.next != null && current.next.next.data != data){
+    while(current.next != null && current.next.next != null && current.next.next.val != data){
         current = current.next;
     }
     if(current.next != null){
@@ -167,7 +167,7 @@ public void displayInReverse(){
         current = current.next;
     }
     for (int i = myList.size() - 1; i >=0; i --){
-        System.out.print(myList.get(i).data + " -> ");
+        System.out.print(myList.get(i).val + " -> ");
     }
     System.out.println("null");
 

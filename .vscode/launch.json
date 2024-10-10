@@ -1,0 +1,112 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "BST",
+            "request": "launch",
+            "mainClass": "Trees.BST",
+            "projectName": "Data-Structures_e5326821"
+        },
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "MainClassDemo",
+            "request": "launch",
+            "mainClass": "DoubleLinkedLists.MainClassDemo",
+            "projectName": "Data-Structures_e5326821"
+        },
+        {
+            "type": "java",
+            "name": "DequeHW",
+            "request": "launch",
+            "mainClass": "Homework.DequeHW",
+            "projectName": "Data-Structures_e5326821"
+        },
+        {
+            "type": "java",
+            "name": "MainClassDemo(1)",
+            "request": "launch",
+            "mainClass": "Homework.MainClassDemo",
+            "projectName": "Data-Structures_e5326821"
+        },
+        {
+            "type": "java",
+            "name": "LinkedListClass",
+            "request": "launch",
+            "mainClass": "LinkedListClass",
+            "projectName": "Data-Structures_e5326821"
+        },
+        {
+            "type": "java",
+            "name": "MainClassDemo(2)",
+            "request": "launch",
+            "mainClass": "LinkedLists.MainClassDemo",
+            "projectName": "Data-Structures_e5326821"
+        },
+        {
+            "type": "java",
+            "name": "PalindromeProblem",
+            "request": "launch",
+            "mainClass": "Recursion.PalindromeProblem",
+            "projectName": "Data-Structures_e5326821"
+        },
+        {
+            "type": "java",
+            "name": "Review",
+            "request": "launch",
+            "mainClass": "Recursion.Review",
+            "projectName": "Data-Structures_e5326821"
+        },
+        {
+            "type": "java",
+            "name": "TreeNode$BST",
+            "request": "launch",
+            "mainClass": "Trees.TreeNode$BST",
+            "projectName": "Data-Structures_e5326821"
+        },
+        {
+            "type": "java",
+            "name": "TwoSum",
+            "request": "launch",
+            "mainClass": "TwoSum",
+            "projectName": "Data-Structures_e5326821"
+        },
+        {
+            "type": "java",
+            "name": "Problem1",
+            "request": "launch",
+            "mainClass": "stackAndQueue.Problem1",
+            "projectName": "Data-Structures_e5326821"
+        },
+        {
+            "type": "java",
+            "name": "Problem2",
+            "request": "launch",
+            "mainClass": "stackAndQueue.Problem2",
+            "projectName": "Data-Structures_e5326821"
+        },
+        {
+            "type": "java",
+            "name": "Problem3",
+            "request": "launch",
+            "mainClass": "stackAndQueue.Problem3",
+            "projectName": "Data-Structures_e5326821"
+        },
+        {
+            "type": "java",
+            "name": "myDeque",
+            "request": "launch",
+            "mainClass": "stackAndQueue.myDeque",
+            "projectName": "Data-Structures_e5326821"
+        }
+    ]
+}
