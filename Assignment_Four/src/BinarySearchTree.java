@@ -91,19 +91,23 @@ public class BinarySearchTree {
         else{
             // Case 1: There are no children
             if (root.left == null && root.right == null){
+                System.out.println("Node with value " + key + " has been deleted");
                 return null;
             }
             //Case 2: There is one child
             if (root.left == null){
+                System.out.println("Node with value " + key + " has been deleted");
                 return root.right;
             }
             if (root.right == null){
+                System.out.println("Node with value " + key + " has been deleted");
                 return root.left;
             }
             // Case 3: There are two children
             Node replacement = findMin(root.right);
             root.data = replacement.data;
             root.right = deleteRec(root.right, replacement.data);
+            System.out.println("Node with value " + key + " has been deleted");
         }
         return root;
     }
@@ -175,7 +179,7 @@ public class BinarySearchTree {
         if (root == null) {
             return; 
         }
-        System.out.println("Subtree size for node " + root.data + ": " + subtreeSize(root));
+        System.out.println("Node " + root.data + ": Left Subtree Size = " + subtreeSize(root.left) + ", Right Subtree Size = " + subtreeSize(root.right));;
         printSubtreeSize(root.left);
         printSubtreeSize(root.right);
     }
