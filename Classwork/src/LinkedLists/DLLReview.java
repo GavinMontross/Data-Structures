@@ -13,58 +13,56 @@ class Node {
 class DLL {
     Node head;
     Node tail;
-    DLL() {
+    DLL(){
         this.head = null;
         this.tail = null;
     }
-    public void add(int value){
+    public void add(int data){
+        Node newNode = new Node(data);
         if (head == null){
-            Node newNode = new Node(value);
             head = newNode;
             tail = newNode;
         }
-        else {
-            Node newNode = new Node(value);
+        else{
             tail.next = newNode;
             newNode.prev = tail;
             tail = newNode;
         }
     }
-    public void delete(int value){
+    public void delete(int data){
         if (head == null){
-            System.out.println("List is empty. ");
+            System.out.println("This list is empty");
             return;
         }
         Node current = head;
-        while (current != null && current.val != value){
+        while(current != null && current.val != data){
             current = current.next;
         }
-        if (current != null) {
+        if (current != null){
             current.prev.next = current.next;
+            return;
         }
         else{
-            System.out.println("Node with value " + value + " is not present in this list.");
+            System.out.println("Node with data: " + data + " not in list");
         }
     }
-    public void insertBefore(int beforeData, int value){
-        Node newNode = new Node(value);
+    public void insertAfter(int beforeData, int insertVal){
+        if(head == null){
+            System.out.println("List is empty");
+            return;
+        }
         Node current = head;
-        if (head.val == beforeData){
-            newNode.next = head;
-            head.prev = newNode;
-            head = newNode;
+        while (current != null && current.val != beforeData){
+            current= current.next;
         }
-        while(current != null && current.next.val != beforeData){
-            current = current.next;}
-            if (current != null){
-                newNode.next = current.next;
-                newNode.prev = current;
-                current.next = newNode;
-            }
-            else {
-                System.out.println("Node with data " + beforeData + " not found.");
-            }
+        if (current != null){
+            Node newNode = new Node(insertVal);
+            newNode.next = current.next;
+            newNode.prev = current;
+            current.next = newNode;
+        }
     }
+
 }
 public class DLLReview {
     
