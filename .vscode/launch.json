@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "Main",
+            "projectName": "Data-Structures_e5326821"
+        },
+        {
+            "type": "java",
             "name": "BST",
             "request": "launch",
             "mainClass": "Trees.BST",

@@ -136,8 +136,22 @@ public class BinarySearchTree {
 
     public void printSubtreeSize() {
         System.out.println("Printing subtree size for each node in BST");
-        //WRITE NECESSARY CODES
-        return;
+        printSubtreeSize(root); // Call the helper method starting from the root
+    }
+    
+    private void printSubtreeSize(Node root) {
+        if (root == null) {
+            return; 
+        }
+        System.out.println("Subtree size for node " + root.data + ": " + subtreeSize(root));
+        printSubtreeSize(root.left);
+        printSubtreeSize(root.right);
+    }
+    public int subtreeSize(Node root) {
+        if (root == null) {
+            return 0;
+        }
+        return 1 + subtreeSize(root.left) + subtreeSize(root.right);
     }
 
     // ==========================
@@ -150,7 +164,10 @@ public class BinarySearchTree {
 
     private int heightRec(Node root) {
         //WRITE YOUR CODE HERE
-        return 0; //you can change it to other value
+        if (root == null){
+            return 0;
+        }
+        return 1 + Math.max(heightRec(root.left), heightRec(root.right));
     }
 
     // ==========================
