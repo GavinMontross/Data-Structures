@@ -63,6 +63,7 @@ public class Main {
         System.out.println("Number of Leaf Nodes after deletion: " + bst.countLeafNodes()); // Expected: 3
 
         //level Order Traversal: Extra credit
+        System.out.println("Level Order Traversal: ");
         bst.levelOrderTraversal();
 
     }

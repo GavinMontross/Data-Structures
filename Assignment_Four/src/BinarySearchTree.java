@@ -78,8 +78,40 @@ public class BinarySearchTree {
     // Recursive method to delete a key from BST
     private Node deleteRec(Node root, int key) {
         //WRITE YOUR CODE HERE
-
+        if (root == null){
+            System.out.println("No value of " + key);
+            return root;
+        }
+        if (key < root.data) {
+            root.left = deleteRec(root.left, key);
+        } 
+        else if (key > root.data) {
+            root.right = deleteRec(root.right, key);
+        }
+        else{
+            // Case 1: There are no children
+            if (root.left == null && root.right == null){
+                return null;
+            }
+            //Case 2: There is one child
+            if (root.left == null){
+                return root.right;
+            }
+            if (root.right == null){
+                return root.left;
+            }
+            // Case 3: There are two children
+            Node replacement = findMin(root.right);
+            root.data = replacement.data;
+            root.right = deleteRec(root.right, replacement.data);
+        }
         return root;
+    }
+    private Node findMin(Node node){
+        while (node.left != null){
+            node = node.left;
+        }
+        return node;
     }
 
 
@@ -180,7 +212,13 @@ public class BinarySearchTree {
 
     private int countLeafRec(Node root) {
         //WRITE YOUR CODE HERE
-        return 0; //you can change it to other value
+        if (root == null){
+            return 0;
+        }
+        if (root.left == null && root.right == null){
+            return 1;
+        }
+        return countLeafRec(root.left) + countLeafRec(root.right);
     }
 
     // ==========================
@@ -189,9 +227,24 @@ public class BinarySearchTree {
 
     public void levelOrderTraversal() {
         //WRITE YOUR CODE HERE
+        levelOrderTraversalRec(root);
         return;
     }
+    private void levelOrderTraversalRec(Node root){
+        Queue<Node> queue = new LinkedList<>();
+        queue.add(root);
+        while (!queue.isEmpty()){
+            Node current = queue.remove();
+            System.out.print(current.data + " ");
 
+            if (current.left != null){
+                queue.add(current.left);
+            }
+            if (current.right != null){
+                queue.add(current.right);
+            }
+        }
+    }
     // ==========================
     // 7. Utility Methods (Optional)
     // ==========================
