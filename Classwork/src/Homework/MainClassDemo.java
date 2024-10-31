@@ -149,6 +149,18 @@ class SNode {
         }
         return total;
     }
+    public void reverse() {
+        SNode curr = head;
+        SNode prev = null;
+        SNode next = null;
+        while (curr != null){
+            next = curr.next;
+            curr.next = prev;
+            prev = curr;
+            curr = next;
+        }
+        head = prev;
+    }
     }
     public class MainClassDemo {
     public static void main(String[] args) {
@@ -174,5 +186,7 @@ class SNode {
     SLL.insertAtFront(90); //add 90 as head
     SLL.display();
     System.out.println("Total nodes in the list: "+ SLL.totalNodes());
+    SLL.reverse();
+    SLL.display();
     }
     }

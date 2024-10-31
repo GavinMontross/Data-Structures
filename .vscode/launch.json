@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "HeapHuffmanPractice",
+            "request": "launch",
+            "mainClass": "Homework.HeapHuffmanPractice",
+            "projectName": "Data-Structures_e5326821"
+        },
+        {
+            "type": "java",
+            "name": "HeapDemo",
+            "request": "launch",
+            "mainClass": "HeapAndHuffman.HeapDemo",
+            "projectName": "Data-Structures_e5326821"
+        },
+        {
+            "type": "java",
             "name": "Main",
             "request": "launch",
             "mainClass": "Main",
