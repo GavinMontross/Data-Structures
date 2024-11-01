@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Practice",
+            "request": "launch",
+            "mainClass": "Practice",
+            "projectName": "Data-Structures_e5326821"
+        },
+        {
+            "type": "java",
             "name": "HeapHuffmanPractice",
             "request": "launch",
             "mainClass": "Homework.HeapHuffmanPractice",
