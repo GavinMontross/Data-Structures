@@ -6,6 +6,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "Main",
+            "projectName": "Data-Structures_14b70b05"
+        },
+        {
+            "type": "java",
+            "name": "quickSortPrac",
+            "request": "launch",
+            "mainClass": "quickSortPrac",
+            "projectName": "Data-Structures_14b70b05"
+        },
+        {
+            "type": "java",
+            "name": "mergeSortCodePrac",
+            "request": "launch",
+            "mainClass": "mergeSortCodePrac",
+            "projectName": "Data-Structures_14b70b05"
+        },
+        {
+            "type": "java",
             "name": "Practice",
             "request": "launch",
             "mainClass": "Practice",

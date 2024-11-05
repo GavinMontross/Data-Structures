@@ -39,6 +39,49 @@ public class Practice {
             System.arraycopy(merged, 0, arr, 0, merged.length);
         }
     }
+    public static void bubbleSort(int[] nums){
+        boolean swapped;
+        for (int i = 0; i < nums.length - 1; i++) {
+            swapped = false;
+            for (int j = 0; j < nums.length - 1 - i; j++) {
+                if (nums[j] > nums[j + 1]) {
+                    int temp = nums[j];
+                    nums[j] = nums[j + 1];
+                    nums[j + 1] = temp;
+                    swapped = true;
+                }
+            }
+            if (!swapped) break;
+        }
+    }
+    public static void quickSort(int[] nums) {
+        quickSort(nums, 0, nums.length - 1);
+    }
+
+    private static void quickSort(int[] nums, int low, int high) {
+        if (low < high) {
+            int pi = partition(nums, low, high);
+            quickSort(nums, low, pi - 1);
+            quickSort(nums, pi + 1, high);
+        }
+    }
+
+    private static int partition(int[] nums, int low, int high) {
+        int pivot = nums[high];
+        int i = (low - 1);
+        for (int j = low; j < high; j++) {
+            if (nums[j] <= pivot) {
+                i++;
+                int temp = nums[i];
+                nums[i] = nums[j];
+                nums[j] = temp;
+            }
+        }
+        int temp = nums[i + 1];
+        nums[i + 1] = nums[high];
+        nums[high] = temp;
+        return i + 1;
+    }
     public static int[] twoSortedArrays(int[] nums1, int[] nums2){
         int length = nums1.length + nums2.length;
         int[] output = new int[length];
